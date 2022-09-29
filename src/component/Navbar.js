@@ -1,7 +1,17 @@
 import React from "react";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <nav className='w-full bg-white shadow-md h-16 flex justify-between items-center mb-10 px-4 sm:px-10'>
+      <p className='text-gradient text-xl xs:text-2xl font-bold '>
+        EvenTracker
+      </p>
+      <div className='flex space-x-2'>
+        <button className='btn-primary'>Login</button>
+        <button className='btn-primary'>Signup</button>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
