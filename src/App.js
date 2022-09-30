@@ -8,7 +8,7 @@ import Event from "./pages/Event";
 
 function App() {
   return (
-    <div className='App'>
+    <>
       <Navbar />
       <Router>
         <Routes>
@@ -19,7 +19,7 @@ function App() {
       </Router>
 
       <Footer />
-    </div>
+    </>
   );
 }
 
