@@ -6,8 +6,30 @@ import Pajama from "../assets/images/pajama.jpg";
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
-      <img className='px-10' src={Pajama} width={500} height={800} alt='' />
+      <div className='  bgImage'>
+        <div className='sectionWidth flex justify-between items-center'>
+          <img
+            className='my-24 ml-44 rounded-xl'
+            src={Pajama}
+            width={440}
+            height={776}
+            alt='Event image'
+          />
+          <div className='lg:mr-24  text-right'>
+            <h1 className='pl-44 text-6xl font-bold text-darkBlue'>
+              Imagine if <span className='text-purple-600'>Snapchat</span> had
+              events
+            </h1>
+            <p className='text-xl  pl-32'>
+              Easily host and share events with your friends across any social
+              media.
+            </p>
+            <button className='btn-primary float-right '>
+              Create my event
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
