@@ -2,13 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1140px",
-      xxl: "1250px",
-    },
+    // screens: {
+    //   xs: "395px",
+    //   sm: "596",
+    //   md: "850px",
+    //   lg: "1024px",
+    //   xl: "1140px",
+    //   xxl: "1250px",
+    // },
     colors: {
       current: "currentColor",
       transparent: "transparent",

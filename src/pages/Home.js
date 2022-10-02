@@ -1,4 +1,5 @@
 import React from "react";
+import { GiPartyPopper } from "react-icons/gi";
 import Pajama from "../assets/images/pajama.jpg";
 
 // <a href="https://www.freepik.com/free-vector/pajamas-party-cartoon-web-banner-invitation_23068299.htm#page=2&query=mobile%20app&position=16&from_view=search">Image by upklyak</a> on Freepik
@@ -6,25 +7,34 @@ import Pajama from "../assets/images/pajama.jpg";
 const Home = () => {
   return (
     <>
-      <div className='  bgImage'>
-        <div className='sectionWidth flex justify-between items-center'>
+      <div className='bgImage'>
+        <div className='sectionWidth flex flex-col-reverse justify-center mx-auto md:flex-row md:justify-between items-center'>
+          <button className='btn-primary w-52 mb-8 mx-auto md:hidden '>
+            <span className='mr-2 text-yellow-300'>
+              <GiPartyPopper />
+            </span>
+            Create my event
+          </button>
           <img
-            className='my-24 ml-44 rounded-xl'
+            className='my-8 md:ml-44 rounded-xl'
             src={Pajama}
-            width={440}
-            height={776}
-            alt='Event image'
+            width={180}
+            height={292}
+            alt='Event'
           />
-          <div className='lg:mr-24  text-right'>
-            <h1 className='pl-44 text-6xl font-bold text-darkBlue'>
+          <div className=' text-center md:text-right'>
+            <h1 className='text-4xl px-14 sm:text-6xl sm:p-0 leading-10 sm:leading-none mx-auto max-w-[320px] mt-20 font-bold text-darkBlue'>
               Imagine if <span className='text-purple-600'>Snapchat</span> had
               events
             </h1>
-            <p className='text-xl  pl-32'>
+            <p className='my-3 px-10 text-gray-700'>
               Easily host and share events with your friends across any social
               media.
             </p>
-            <button className='btn-primary float-right '>
+            <button className='btn-primary btnWideScreen '>
+              <span className='mr-2 text-yellow-300'>
+                <GiPartyPopper />
+              </span>
               Create my event
             </button>
           </div>

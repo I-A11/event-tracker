@@ -36,3 +36,14 @@ h4 {
 .sectionWidth {
   @apply max-w-7xl mx-auto;
 }
+
+.btnWideScreen {
+  display: flex;
+  float: right;
+}
+
+@media (max-width: 850px) {
+  .btnWideScreen {
+    display: none;
+  }
+}
