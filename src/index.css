@@ -46,6 +46,10 @@ h4 {
     display: flex;
     float: right;
   }
+  .imageWideScreen {
+    width: 300px;
+    height: 390px;
+  }
 }
 
 @media (min-width: 895px) {
