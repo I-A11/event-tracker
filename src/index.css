@@ -38,12 +38,26 @@ h4 {
 }
 
 .btnWideScreen {
-  display: flex;
-  float: right;
+  display: none;
 }
 
-@media (max-width: 850px) {
+@media (min-width: 768px) {
   .btnWideScreen {
-    display: none;
+    display: flex;
+    float: right;
+  }
+}
+
+@media (min-width: 895px) {
+  .imageWideScreen {
+    width: 350px;
+    height: 600px;
+  }
+}
+
+@media (min-width: 1130px) {
+  .imageWideScreen {
+    width: 400px;
+    height: 725px;
   }
 }

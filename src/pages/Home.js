@@ -7,7 +7,7 @@ import Pajama from "../assets/images/pajama.jpg";
 const Home = () => {
   return (
     <>
-      <div className='bgImage'>
+      <div className='bgImage md:py-28'>
         <div className='sectionWidth flex flex-col-reverse justify-center mx-auto md:flex-row md:justify-between items-center'>
           <button className='btn-primary w-52 mb-8 mx-auto md:hidden '>
             <span className='mr-2 text-yellow-300'>
@@ -16,22 +16,22 @@ const Home = () => {
             Create my event
           </button>
           <img
-            className='my-8 md:ml-44 rounded-xl'
+            className='my-8 md:ml-44 rounded-xl imageWideScreen'
             src={Pajama}
             width={180}
             height={292}
             alt='Event'
           />
-          <div className=' text-center md:text-right'>
-            <h1 className='text-4xl px-14 sm:text-6xl sm:p-0 leading-10 sm:leading-none mx-auto max-w-[320px] mt-20 font-bold text-darkBlue'>
+          <div className=' text-center md:text-right md:mr-32'>
+            <h1 className='text-4xl px-14 lg:text-6xl md:p-0 leading-10 sm:leading-none mx-auto max-w-[320px] mt-20 font-bold text-darkBlue'>
               Imagine if <span className='text-purple-600'>Snapchat</span> had
               events
             </h1>
-            <p className='my-3 px-10 text-gray-700'>
+            <p className='my-3 text-gray-700 mx-auto px-5 max-w-[380px]'>
               Easily host and share events with your friends across any social
               media.
             </p>
-            <button className='btn-primary btnWideScreen '>
+            <button className='btn-primary btnWideScreen mr-5'>
               <span className='mr-2 text-yellow-300'>
                 <GiPartyPopper />
               </span>
