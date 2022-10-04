@@ -9,7 +9,7 @@ const Home = () => {
       <div className='bgImage md:py-28'>
         <div className='sectionWidth flex flex-col-reverse justify-center mx-auto md:flex-row md:justify-between items-center'>
           <Link to='/create'>
-            <button className='btn-primary w-52 mb-8 mx-auto md:hidden '>
+            <button className='btn-primary w-52 mb-8 mx-auto md:hidden font-bold'>
               <span className='mr-2 text-yellow-300'>
                 <GiPartyPopper />
               </span>
@@ -34,7 +34,7 @@ const Home = () => {
               media.
             </p>
             <Link to='/create'>
-              <button className='btn-primary btnWideScreen mr-5'>
+              <button className='btn-primary btnWideScreen mr-5 font-bold'>
                 <span className='mr-2 text-yellow-300'>
                   <GiPartyPopper />
                 </span>

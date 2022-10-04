@@ -9,16 +9,15 @@ import Event from "./pages/Event";
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='create' element={<Create />} />
           <Route path='event' element={<Event />} />
         </Routes>
+        <Footer />
       </Router>
-
-      <Footer />
     </>
   );
 }
