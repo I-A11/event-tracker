@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GiPartyPopper } from "react-icons/gi";
 import Pajama from "../assets/images/pajama.jpg";
 
@@ -7,12 +8,15 @@ const Home = () => {
     <>
       <div className='bgImage md:py-28'>
         <div className='sectionWidth flex flex-col-reverse justify-center mx-auto md:flex-row md:justify-between items-center'>
-          <button className='btn-primary w-52 mb-8 mx-auto md:hidden '>
-            <span className='mr-2 text-yellow-300'>
-              <GiPartyPopper />
-            </span>
-            Create my event
-          </button>
+          <Link to='/create'>
+            <button className='btn-primary w-52 mb-8 mx-auto md:hidden '>
+              <span className='mr-2 text-yellow-300'>
+                <GiPartyPopper />
+              </span>
+              Create my event
+            </button>
+          </Link>
+
           <img
             className='my-8 md:ml-44 rounded-xl imageWideScreen'
             src={Pajama}
@@ -29,12 +33,14 @@ const Home = () => {
               Easily host and share events with your friends across any social
               media.
             </p>
-            <button className='btn-primary btnWideScreen mr-5'>
-              <span className='mr-2 text-yellow-300'>
-                <GiPartyPopper />
-              </span>
-              Create my event
-            </button>
+            <Link to='/create'>
+              <button className='btn-primary btnWideScreen mr-5'>
+                <span className='mr-2 text-yellow-300'>
+                  <GiPartyPopper />
+                </span>
+                Create my event
+              </button>
+            </Link>
           </div>
         </div>
       </div>
