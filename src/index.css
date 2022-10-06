@@ -41,6 +41,27 @@ h4 {
   display: none;
 }
 
+form p {
+  display: flex;
+  align-items: center;
+  margin-left: 0.25rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+form input {
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #d2cdcd;
+  height: 2.5rem;
+}
+
+form input:focus {
+  outline: none;
+}
+
 @media (min-width: 768px) {
   .btnWideScreen {
     display: flex;
@@ -56,6 +77,12 @@ h4 {
   .imageWideScreen {
     width: 350px;
     height: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  form input {
+    width: 28rem;
   }
 }
 
