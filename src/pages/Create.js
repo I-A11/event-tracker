@@ -20,15 +20,23 @@ const Create = () => {
     url,
     setUrl,
     error,
+    setError,
     submitHandler,
+    toggleError,
   } = useEventContext();
 
   return (
     <div className='sectionWidth sm:px-28 md:px-24 w-full'>
-      <div>{error ? <div>Please Fill all fields</div> : null}</div>
       <h1 className='text-center text-4xl md:text-5xl lg:text-6xl font-bold my-10 text-purple-800'>
         Create your event
       </h1>
+      <div className=' text-xl font-semibold ml-8 md:ml-0 text-red-500'>
+        {error.show && (
+          <div>
+            <p>{error.msg}</p>
+          </div>
+        )}
+      </div>
       <div className='lg:flex lg:flex-row-reverse justify-center items-start '>
         <img
           className='mx-auto px-16 md:px-0 lg:mt-8 mt-6 mb-4 md:pr-5 '

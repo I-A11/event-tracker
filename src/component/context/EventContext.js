@@ -9,23 +9,36 @@ export const EventProvider = ({ children }) => {
   const [location, setLocation] = useState("");
   const [url, setUrl] = useState("");
   const [dayEvent, setDayEvent] = useState([]);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState({ show: false, msg: "" });
+
+  const toggleError = (show, msg) => {
+    setError({
+      show,
+      msg,
+    });
+    setTimeout(() => {
+      setError({
+        show: false,
+        msg: "",
+      });
+    }, 3000);
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
     if ((event, start, end, location, url)) {
-      setError(false);
       const newEvent = { event, start, end, location, url };
       setDayEvent((oldEvent) => {
         return [...oldEvent, newEvent];
       });
+      console.log(newEvent);
       setEvent("");
       setStart("");
       setEnd("");
       setLocation("");
       setUrl("");
     } else {
-      setError(true);
+      toggleError(true, "Sorry, All fields have to be filled");
     }
   };
 
@@ -45,7 +58,9 @@ export const EventProvider = ({ children }) => {
         dayEvent,
         setDayEvent,
         error,
+        setError,
         submitHandler,
+        toggleError,
       }}
     >
       {children}
