@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useEventContext } from "../component/context/EventContext";
 import { GiPartyPopper } from "react-icons/gi";
 import { FcOvertime } from "react-icons/fc";
@@ -21,9 +22,30 @@ const Create = () => {
     setUrl,
     error,
     setError,
-    submitHandler,
+    setDayEvent,
     toggleError,
   } = useEventContext();
+
+  const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if ((event, start, end, location, url)) {
+      const newEvent = { event, start, end, location, url };
+      setDayEvent((oldEvent) => {
+        return [...oldEvent, newEvent];
+      });
+      console.log(newEvent);
+      setEvent("");
+      setStart("");
+      setEnd("");
+      setLocation("");
+      setUrl("");
+      navigate("/event");
+    } else {
+      toggleError(true, "Sorry, All fields have to be filled");
+    }
+  };
 
   return (
     <div className='sectionWidth sm:px-28 md:px-24 w-full'>
@@ -106,12 +128,13 @@ const Create = () => {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
+
           <button
             type='submit'
             className='btn-primary mt-10 mb-20'
             onClick={submitHandler}
           >
-            Check your event
+            Create your event
           </button>
         </form>
       </div>

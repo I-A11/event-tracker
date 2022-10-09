@@ -24,24 +24,6 @@ export const EventProvider = ({ children }) => {
     }, 3000);
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if ((event, start, end, location, url)) {
-      const newEvent = { event, start, end, location, url };
-      setDayEvent((oldEvent) => {
-        return [...oldEvent, newEvent];
-      });
-      console.log(newEvent);
-      setEvent("");
-      setStart("");
-      setEnd("");
-      setLocation("");
-      setUrl("");
-    } else {
-      toggleError(true, "Sorry, All fields have to be filled");
-    }
-  };
-
   return (
     <EventContext.Provider
       value={{
@@ -59,7 +41,6 @@ export const EventProvider = ({ children }) => {
         setDayEvent,
         error,
         setError,
-        submitHandler,
         toggleError,
       }}
     >
