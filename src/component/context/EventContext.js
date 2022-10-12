@@ -3,21 +3,21 @@ import React, { useState, useEffect, useContext } from "react";
 const EventContext = React.createContext();
 
 export const EventProvider = ({ children }) => {
-  const getLocalStorage = () => {
-    let dayEvent = localStorage.getItem("dayEvent");
-    if (dayEvent) {
-      return JSON.parse(localStorage.getItem("dayEvent"));
-    } else {
-      return [];
-    }
-  };
+  // const getLocalStorage = () => {
+  //   let dayEvent = localStorage.getItem("dayEvent");
+  //   if (dayEvent) {
+  //     return JSON.parse(localStorage.getItem("dayEvent"));
+  //   } else {
+  //     return [];
+  //   }
+  // };
 
   const [event, setEvent] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
   const [location, setLocation] = useState("");
   const [url, setUrl] = useState("");
-  const [dayEvent, setDayEvent] = useState(getLocalStorage());
+  const [dayEvent, setDayEvent] = useState([]);
   const [error, setError] = useState({ show: false, msg: "" });
 
   const toggleError = (show, msg) => {
@@ -33,9 +33,9 @@ export const EventProvider = ({ children }) => {
     }, 3000);
   };
 
-  useEffect(() => {
-    localStorage.setItem("dayEvent", JSON.stringify(dayEvent));
-  }, [dayEvent]);
+  // useEffect(() => {
+  //   localStorage.setItem("dayEvent", JSON.stringify(dayEvent));
+  // }, [dayEvent]);
 
   return (
     <EventContext.Provider
