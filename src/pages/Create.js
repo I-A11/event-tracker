@@ -48,7 +48,7 @@ const Create = () => {
   };
 
   return (
-    <div className='sectionWidth sm:px-28 md:px-24 w-full'>
+    <div className='sectionWidth sm:px-28 md:px-24 w-full lg:py-36'>
       <h1 className='text-center text-4xl md:text-5xl lg:text-6xl font-bold my-10 text-purple-800'>
         Create your event
       </h1>

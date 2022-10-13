@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className=' w-full bg-white shadow-md'>
-      <nav className=' sectionWidth h-16 flex justify-between items-center px-4 sm:px-10'>
+    <div className=' w-full bg-white shadow-md '>
+      <nav className=' sectionWidth h-20 flex justify-between items-center px-4 sm:px-10'>
         <Link to='/'>
           <p className='text-gradient text-xl font-bold '>EvenTracker</p>
         </Link>

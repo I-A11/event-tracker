@@ -9,7 +9,7 @@ const Event = () => {
   const { dayEvent } = useEventContext();
 
   return (
-    <div className='bg-pink-100'>
+    <div className='bg-pink-100 py-20'>
       <div className='sectionWidth lg:flex lg:flex-row-reverse lg:justify-center lg:items-center lg:py-40'>
         <div className='lg:w-1/2'>
           <img className='mb-6 md:p-20 ' src={Celebrate} alt='celebrate' />
