@@ -63,26 +63,26 @@ form input:focus {
 }
 
 @media (min-width: 768px) {
-  .btnWideScreen {
-    display: flex;
-    float: right;
-  }
   .imageWideScreen {
-    width: 300px;
-    height: 390px;
+    width: 320px;
+    height: 700px;
   }
 }
 
 @media (min-width: 895px) {
   .imageWideScreen {
-    width: 350px;
-    height: 600px;
+    width: 400px;
+    height: 750px;
   }
 }
 
 @media (min-width: 1024px) {
   form input {
     width: 28rem;
+  }
+  .btnWideScreen {
+    display: flex;
+    float: right;
   }
 }
 

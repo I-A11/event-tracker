@@ -5,11 +5,11 @@ import Pajama from "../assets/images/pajama.jpg";
 
 const Home = () => {
   return (
-    <>
-      <div className='bgImage md:py-28'>
-        <div className='sectionWidth flex flex-col-reverse justify-center mx-auto md:flex-row md:justify-between items-center'>
+    <div>
+      <div className='bgImage overflow-hidden  py-28'>
+        <div className='sectionWidth flex flex-col-reverse justify-center mx-auto lg:flex-row lg:justify-between items-center'>
           <Link to='/create'>
-            <button className='btn-primary w-52 mb-8 mx-auto md:hidden font-bold'>
+            <button className='btn-primary w-52 mb-8 mx-auto lg:hidden font-bold'>
               <span className='mr-2 text-yellow-300'>
                 <GiPartyPopper />
               </span>
@@ -18,14 +18,14 @@ const Home = () => {
           </Link>
 
           <img
-            className='my-8 md:ml-44 rounded-xl imageWideScreen'
+            className='my-8 lg:ml-44 rounded-xl imageWideScreen'
             src={Pajama}
-            width={180}
+            width={300}
             height={292}
             alt='Event'
           />
-          <div className=' text-center md:text-right md:mr-32'>
-            <h1 className='text-4xl px-14 lg:text-6xl md:p-0 leading-10 sm:leading-none mx-auto max-w-[320px] mt-20 font-bold text-darkBlue'>
+          <div className=' text-center lg:text-right lg:mr-32'>
+            <h1 className='text-4xl px-14 md:px-8 md:text-5xl lg:text-6xl lg:p-0 leading-10 sm:leading-none mx-auto max-w-[320px] mt-20 font-bold text-darkBlue'>
               Imagine if <span className='text-purple-600'>Snapchat</span> had
               events
             </h1>
@@ -44,7 +44,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
