@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsCalendarEvent } from "react-icons/bs";
 import { MdOutlineAddLocation } from "react-icons/md";
 import { useEventContext } from "../component/context/EventContext";
@@ -7,6 +7,13 @@ import Celebrate from "../assets/images/celebrate.webp";
 
 const Event = () => {
   const { dayEvent } = useEventContext();
+  const navigate = useNavigate();
+
+  function refreshPage() {
+    navigate("/");
+
+    window.location.reload(false);
+  }
 
   return (
     <div className='bg-pink-100 py-20'>
@@ -48,11 +55,12 @@ const Event = () => {
                     </div>
                   </div>
                 </div>
-                <Link to='/'>
-                  <button className='btn-primary flex items-center ml-4 mb-8 '>
-                    Home
-                  </button>
-                </Link>
+                <button
+                  className='btn-primary flex items-center ml-4 mb-8'
+                  onClick={refreshPage}
+                >
+                  Home
+                </button>
               </div>
             </div>
           );
