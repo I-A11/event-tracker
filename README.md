@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Tailwind
 
 ### Story
-
+## event tracker app.
 Use React hooks (useState, useEffect, useContext) to create event tracker app.
 
 Use CSS and Tailwind to make the app responsive in different screen sizes.
